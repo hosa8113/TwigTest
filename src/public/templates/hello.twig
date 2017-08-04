@@ -1,0 +1,24 @@
+{% extends 'includes/Main.twig' %}
+
+{% block content %}
+Hello! <b>{{ name }}</b>
+<br/>
+{{ name | upper }}
+<br/>
+
+<h4>Twig-Date-Filter</h4>
+{{ "now"|date("d M Y h:i") }} <br/>
+{{ "now"|date("d/m/y") }} <br/>
+{{ "now"|date("d.m.Y - H:i") }} <br/>
+
+<h4>Seasons</h4>
+{% if month > 11 and month <= 2 %}
+    Winter is here, time to hit the slopes!
+{% elseif month > 2 and month <= 5 %}
+    Spring is here, watch the flowers bloom!
+{% elseif month > 5 and month <= 8 %}
+    Summer is here, time to hit the beach!
+{% elseif month > 8 and month <= 11 %}
+    Autumn is here, watch the leaves slowly fall!
+{% endif %}
+{%  endblock %}

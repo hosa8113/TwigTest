@@ -1,0 +1,11 @@
+When to use inheritance:
+
+You have 50 pages sharing the same layout - you create a layout.twig as a parent, and each page extends that layout.twig. So the parent is the generic and the child is the specific.
+
+When to use include:
+
+Out of the 50 pages, there are 6 pages that share a chunk of HTML - you create a shared-chunk.twig and include it in those 6 pages.
+
+Another usage:
+
+You notice that your layout.twig is bit cluttered and you would like to modularize it, so you split sidebar.twig into a separate file and include it in layout.twig.
